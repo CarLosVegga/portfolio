@@ -1,0 +1,275 @@
+body {
+    width: 100vw;
+}
+
+
+/*  ============== HEADER ============== */
+
+header {
+    background-repeat: round;
+    background: linear-gradient(120deg, #38BA8A, #3BA5B4);
+    background: linear-gradient(30deg, #003566, #3BA5B4);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+}
+
+header img {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+header span {
+    color: white;
+    font-size: 25px;
+}
+
+/*  ============== ABOUT ME ============== */
+
+.aboutMe {
+    background-color: #001D3D;
+    padding: 100px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#aboutMeHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    color: #3BA5B4;
+    display: flex;
+    background-color: white;
+    width: 130px;
+    height: 30px;
+    padding: 3px 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.aboutMe h2 {
+    color: #FDC500;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0px;
+}
+
+.aboutMe h3 {
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.aboutMe hr {
+    border: 1px solid #FDC500;
+    width: 100px;
+    margin-left: 0;
+}
+
+#description {
+    margin: 20px 0 40px 0;
+}
+
+#quote {
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+span.paragraph {
+    display: block;
+}
+
+.aboutMe img {
+    margin: 0 40px;
+    width: 30rem;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+span.tableH {
+    font-weight: bold;
+    font-style: italic;
+    color: #FFC300
+}
+
+table {
+    padding: 0 20px;
+}
+
+td {
+    padding: 10px 10px;
+}
+
+
+/*  ============== PROJECTS ============== */
+
+
+.portfolio {
+    background-color: #003566;
+    color: white;
+    display: flex;
+    padding: 50px 40px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio h2 {
+    color: #FDC500;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0px;
+}
+
+.portfolio h3 {
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.portfolio hr {
+    border: 1px solid #FDC500;
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+/*  ============== CARDS ============== */
+
+
+#projects {
+    width: 90%;
+    overflow-x: scroll;
+    display: grid;
+    grid-gap: 1rem 0rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+
+.projectCard {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    width: 60%;
+    height: 380px;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255 , 0.19);
+    display: flex;
+    flex-direction: column;
+    perspective: 1000px;
+}
+
+.innerCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+}
+
+.projectCard:hover .innerCard {
+    cursor: pointer;
+}
+
+.frontCard, .backCard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    backface-visibility: hidden;
+}
+
+.backCard {
+    position: absolute;
+    transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flipCard {
+    transform: rotateY(180deg);
+}
+
+.projectCard img {
+    border-radius: 20px;
+    margin-bottom: 5px;
+    max-height: 130px;
+    object-fit: cover;
+}
+
+.projectDates {
+    text-align: right;
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.projectTitle {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 5px 0 3px 0;
+}
+
+.innerCard hr {
+    border: 1px solid #FDC500;
+    width: 100px;
+    margin-bottom: 5px;
+}
+
+.projectSubtitle {
+    text-align: left;
+    color: #003566;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.projectTech {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem 0.2rem;
+}
+
+.tech {
+    background-color: #3BA5B4;
+    border-radius: 1rem;
+    color: white;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem 0
+}
+
+.projectDescription {
+    font-size: 15px;
+    text-align: justify;
+    overflow-y: scroll;
+}
